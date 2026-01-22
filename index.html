@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Test Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @keyframes example {
+            0%   {background-color: #4CAF50; left:0px; top:0px; transform: scale(1);}
+            25%  {background-color: #ffeb3b; left:200px; top:0px; transform: scale(1.2);}
+            50%  {background-color: #f44336; left:200px; top:200px; transform: scale(1);}
+            75%  {background-color: #2196F3; left:0px; top:200px; transform: scale(0.8);}
+            100% {background-color: #4CAF50; left:0px; top:0px; transform: scale(1);}
+        }
+    </style>
 </head>
 <body>
-    <h1>It Works!</h1>
-    <p>If you can see this, your index.html file is loading correctly.</p>
+
+<div class="animated-box"></div>
+
 </body>
 </html>
